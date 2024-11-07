@@ -1,0 +1,23 @@
+{
+  "name": "js-framework-benchmark-essor",
+  "type": "module",
+  "js-framework-benchmark": {
+    "frameworkVersionFromPackage": "essor",
+    "frameworkHomeURL": "https://github.com/estjs/essor",
+    "customURL": "/dist"
+  },
+  
+  "scripts": {
+    "build-prod": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest -r test"
+  },
+  "dependencies": {
+    "essor": "^0.0.14-beta.15"
+  },
+  "devDependencies": {
+    "unplugin-essor": "^0.0.14-beta.15",
+    "vite": "^5.4.10"
+  }
+}
