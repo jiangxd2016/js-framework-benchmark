@@ -1,4 +1,5 @@
 import { signal } from 'essor';
+
 const A = [
   'pretty',
   'large',
@@ -75,7 +76,6 @@ const actions = {
   },
   runLots: () => {
     const data2 = buildData(10000);
-    console.log(data2);
     data.value = data2;
     selected.set(0);
   },
@@ -83,26 +83,26 @@ const actions = {
     data.value = data.value.concat(buildData(1000));
   },
   update: () => {
+
     const _rows = data.value;
     for (let i = 0; i < _rows.length; i += 10) {
       _rows[i].label += ' !!!';
     }
-    data.set(_rows);
   },
   clear: () => {
     data.set([]);
     selected.set(0);
   },
   swapRows: () => {
-    const _rows = data.value;
-    if (_rows.length > 998) {
-      const d1 = _rows[1];
-      const d998 = _rows[998];
-      _rows[1] = d998;
-      _rows[998] = d1;
-      data.set(_rows);
-    }
+      const _rows = data.value;
+      if (_rows.length > 998) {
+        const d1 = _rows[1];
+        const d998 = _rows[998];
+        _rows[1] = d998;
+        _rows[998] = d1;
+      }
   },
+
   remove: (id) => {
     data.update(data => {
       const idx = data.findIndex((d) => d.id === id);

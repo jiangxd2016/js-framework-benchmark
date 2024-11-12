@@ -1,5 +1,5 @@
 # js-framework-benchmark
-
+npm run bench -- --framework keyed/essor
 This is a simple benchmark for several javascript frameworks. The benchmarks creates a large table with randomized entries and measures the time for various operations including rendering duration.
 
 ![Screenshot](images/screenshot.png?raw=true "Screenshot")
